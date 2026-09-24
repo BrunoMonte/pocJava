@@ -1,13 +1,11 @@
 package com.example.pocJava;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@SpringBootApplication
-public class PocJavaApplication {
+@Repository
+public interface TaskRepository extends JpaRepository<Task, Long> {
+	// Seus métodos de banco de dados ficam aqui
 
-	public static void main(String[] args) {
-		SpringApplication.run(PocJavaApplication.class, args);
-	}
-
+	List<Task> findByResponsibleContaininIgnoreCase(String responsible);
 }
