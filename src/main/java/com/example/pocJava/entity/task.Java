@@ -2,6 +2,7 @@ package com.example.pocJava.entity;
 import jakarta.persistence.Entity;
 
 import java.lang.reflect.GenericArrayType;
+import java.time.LocalDate;
 
 
 @Entity
